@@ -39,15 +39,32 @@ $(document).ready(function(){
     var num1 = randomNumberGenerator(10);
     var num2 = randomNumberGenerator(10);
     
+    // var operation = Math.random() < 0.5 ? '+' : '-';
+    var operation;
+    var randomValue = Math.random();
 
-    var operation = Math.random() < 0.5 ? '+' : '*';
+    if (randomValue < 0.25) {
+      operation = '+';
+    } else if (randomValue < 0.5) {
+      operation = '-';
+    } else if (randomValue < 0.75) {
+      operation = '*';
+    } else {
+      operation = '/';
+    }
 
     if (operation === '+') {
       question.answer = num1 + num2;
       question.equation = `${num1} + ${num2}`;
-    } else {
+    } else if (operation === '-') {
+      question.answer = num1 - num2;
+      question.equation = `${num1} - ${num2}`;
+    } else if (operation === '*') {
       question.answer = num1 * num2;
       question.equation = `${num1} * ${num2}`;
+    } else {
+      question.answer = num1 / num2;
+      question.equation = `${num1} / ${num2}`;
     }
 
     return question;
