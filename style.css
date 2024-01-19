@@ -1,4 +1,33 @@
+*{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
-h2 {
-  color: blue;
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(#3480a6, #a291e5);
+  padding: 10px;
+}
+
+.row {
+  max-width: 600px;
+  background: rgb(240, 240, 236);
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -180px;
+  margin-left: -280px;
+  padding: 100px;
+}
+.row h1 {
+  color: #002765;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  border-radius: 10px;
+  padding: 10px;
 }
