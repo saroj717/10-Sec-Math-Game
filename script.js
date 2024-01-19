@@ -39,9 +39,17 @@ $(document).ready(function(){
     var num1 = randomNumberGenerator(10);
     var num2 = randomNumberGenerator(10);
     
-    question.answer = num1 + num2;
-    question.equation = String(num1) + " + " + String(num2);
-    
+
+    var operation = Math.random() < 0.5 ? '+' : '*';
+
+    if (operation === '+') {
+      question.answer = num1 + num2;
+      question.equation = `${num1} + ${num2}`;
+    } else {
+      question.answer = num1 * num2;
+      question.equation = `${num1} * ${num2}`;
+    }
+
     return question;
   };
   
