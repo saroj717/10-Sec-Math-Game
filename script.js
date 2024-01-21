@@ -46,7 +46,7 @@ $(document).ready(function(){
       operation = '+';
     } else if (randomValue < 0.5) {
       operation = '-';
-    } else if (randomValue < 0.75 && (num1 % 2 === 0 && num2 % 2 === 0)) {
+    } else if (randomValue < 0.75 && num2 !== 0 && num1 % num2 === 0) {
       operation = '/';
     } else {
       operation = '*';
