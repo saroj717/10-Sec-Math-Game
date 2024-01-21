@@ -39,7 +39,6 @@ $(document).ready(function(){
     var num1 = randomNumberGenerator(10);
     var num2 = randomNumberGenerator(10);
     
-    // var operation = Math.random() < 0.5 ? '+' : '-';
     var operation;
     var randomValue = Math.random();
 
@@ -47,10 +46,10 @@ $(document).ready(function(){
       operation = '+';
     } else if (randomValue < 0.5) {
       operation = '-';
-    } else if (randomValue < 0.75) {
-      operation = '*';
-    } else {
+    } else if (randomValue < 0.75 && (num1 % 2 === 0 && num2 % 2 === 0)) {
       operation = '/';
+    } else {
+      operation = '*';
     }
 
     if (operation === '+') {
