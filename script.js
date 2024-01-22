@@ -42,11 +42,11 @@ $(document).ready(function(){
     var operation;
     var randomValue = Math.random();
 
-    if (randomValue < 0.25 && num2 !== 0 && num1 % num2 === 0) {
+    if (randomValue < 0.25 && (num1 > num2 && num1 % num2 === 0)) {
       operation = '+';
-    } else if (randomValue < 0.5 && num2 !== 0 && num1 % num2 === 0) {
+    } else if (randomValue < 0.5 && (num1 > num2 && num1 % num2 === 0)) {
       operation = '-';
-    } else if (randomValue < 0.75 && num2 !== 0 && num1 % num2 === 0) {
+    } else if (randomValue < 0.75 && (num1 > num2 && num1 % num2 === 0)) {
       operation = '/';
     } else {
       operation = '*';
